@@ -1,0 +1,174 @@
+@font-face {
+  font-family: Sacramento;
+  src: url("fonts/Sacramento.ttf");
+}
+@font-face {
+  font-family: IndieFlower;
+  src: url("fonts/IndieFlower.ttf");
+}
+:root {
+  --background: #f875aa;
+  --textColor: #353535;
+  --lostColor: #ff0040;
+  --wonColor: #6effa1;
+  --bgEmpty: #f1d1d0;
+  --bgSelected: #fbaccc;
+  --bgSelectedIn: #ffb7d4;
+  --bgBomb: #f875aa;
+  --btnBg: #fbaccc;
+  --btnBgHover: #f1d1d0;
+  --btn: #353535;
+  --btnHover: #353535;
+  --scrollColor: #fbaccc;
+}
+body {
+  background-color: var(--background);
+  user-select: none;
+}
+
+.board {
+  text-align: center;
+  background-color: var(--background);
+  overflow: hidden;
+}
+h1 {
+  font-family: "IndieFlower";
+  color: var(--textColor);
+  text-align: center;
+}
+
+.lost {
+  color: var(--lostColor);
+}
+.won {
+  color: var(--wonColor);
+}
+.cell {
+  color: var(--textColor);
+  font-family: "Sacramento", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border: 0.2rem solid var(--background);
+  margin: 0rem;
+  background-color: var(--bgEmpty);
+  border-radius: 0.5rem;
+}
+br {
+  line-height: 0;
+}
+.on {
+  background-color: var(--bgSelectedIn) !important;
+  background-image: none !important;
+}
+.number {
+  background-color: var(--bgSelected) !important;
+  background-image: none !important;
+}
+
+.empty {
+  background-color: var(--bgEmpty);
+  transition-duration: 0.2s;
+}
+.empty:hover,
+.empty:focus {
+  transition-duration: 0.2s;
+  transform: scale(1.1);
+  /* border-radius: 0rem; */
+}
+
+.bomb {
+  background-image: url("images/bomb.png");
+  background-size: 100%;
+  background-color: var(--bgBomb) !important;
+}
+.flagged {
+  background-image: url("images/flag.png");
+  background-size: 100%;
+  background-color: var(--bgBomb);
+}
+
+.animation {
+  transform: scale(0.7) !important;
+}
+
+.zoomOut {
+  zoom: 70%;
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.button {
+  font-family: "IndieFlower", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: var(--btnBg);
+  color: var(--btn);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: var(--btnBgHover);
+  color: var(--btnHover);
+  transform: scale(1.1);
+  transition-duration: 0.4s;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: auto;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0000;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: var(--scrollColor);
+}
+
+/* {
+  font-family: "IndieFlower", sans-serif;
+  font-size: 1.2rem;
+} */
+h4 {
+  color: var(--lines);
+  text-align: center;
+  font-family: "IndieFlower", sans-serif;
+  margin-bottom: 0.5rem;
+}
+.aTag {
+  font-family: "IndieFlower", sans-serif;
+  font-size: 1.3rem;
+  color: var(--textColor);
+  text-decoration: none;
+  transition-duration: 0.5s;
+  display: inline;
+  background-color: #0000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.aTag:hover {
+  color: var(--bgEmpty);
+  transition-duration: 0.5s;
+}
