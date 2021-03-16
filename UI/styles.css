@@ -6,7 +6,7 @@
   font-family: IndieFlower;
   src: url("fonts/IndieFlower.ttf");
 }
-:root {
+.pink {
   --background: #f875aa;
   --textColor: #353535;
   --lostColor: #ff0040;
@@ -20,6 +20,103 @@
   --btn: #353535;
   --btnHover: #353535;
   --scrollColor: #fbaccc;
+  --creditHover: #f1d1d0;
+}
+.green {
+  --background: #00ad7c;
+  --textColor: #353535;
+  --lostColor: #fff8b5;
+  --wonColor: #b5ff7d;
+  --bgEmpty: #fff8b5;
+  --bgSelected: #b5ff7d;
+  --bgSelectedIn: #c3ff94;
+  --bgBomb: #00ad7c;
+  --btnBg: #6effa1;
+  --btnBgHover: #b5ff7d;
+  --btn: #353535;
+  --btnHover: #353535;
+  --scrollColor: #6effa1;
+  --creditHover: #b5ff7d;
+}
+.dark {
+  --background: #696969;
+  --textColor: #cfcfcf;
+  --lostColor: #ff2b60;
+  --wonColor: #6effa1;
+  --bgEmpty: #222831;
+  --bgSelected: #00adb5;
+  --bgSelectedIn: #089aa1;
+  --bgBomb: #696969;
+  --btnBg: #393e46;
+  --btnBgHover: #00adb5;
+  --btn: #eeeeee;
+  --btnHover: #353535;
+  --scrollColor: #393e46;
+  --creditHover: #00adb5;
+}
+.red {
+  --background: #4c535c;
+  --textColor: #d3d6db;
+  --lostColor: #be3144;
+  --wonColor: #6effa1;
+  --bgEmpty: #d3d6db;
+  --bgSelected: #be3144;
+  --bgSelectedIn: #db5163;
+  --bgBomb: #4c535c;
+  --btnBg: #3a4750;
+  --btnBgHover: #be3144;
+  --btn: #eeeeee;
+  --btnHover: #eeeeee;
+  --scrollColor: #393e46;
+  --creditHover: #be3144;
+}
+.yellow {
+  --background: #1a2634;
+  --textColor: #203e5f;
+  --lostColor: #db5163;
+  --wonColor: #6effa1;
+  --bgEmpty: #203e5f;
+  --bgSelected: #eec550;
+  --bgSelectedIn: #f9e3a3;
+  --bgBomb: #1a2634;
+  --btnBg: #203e5f;
+  --btnBgHover: #eec550;
+  --btn: #eec550;
+  --btnHover: #203e5f;
+  --scrollColor: #393e46;
+  --creditHover: #eec550;
+}
+.armin {
+  --background: #483d3c;
+  --textColor: #f9ebc4;
+  --lostColor: #db5163;
+  --wonColor: #6effa1;
+  --bgEmpty: #a7cf5d;
+  --bgSelected: #a97555;
+  --bgSelectedIn: #be9074;
+  --bgBomb: #483d3c;
+  --btnBg: #a97555;
+  --btnBgHover: #a7cf5d;
+  --btn: #f9ebc4;
+  --btnHover: #f9ebc4;
+  --scrollColor: #a97555;
+  --creditHover: #a7cf5d;
+}
+.brown {
+  --background: #837d7d;
+  --textColor: #52575d;
+  --lostColor: #db5163;
+  --wonColor: #6effa1;
+  --bgEmpty: #aaa6a4;
+  --bgSelected: #f1f4c6;
+  --bgSelectedIn: #dfd8c8;
+  --bgBomb: #837d7d;
+  --btnBg: #dfd8c8;
+  --btnBgHover: #52575d;
+  --btn: #52575d;
+  --btnHover: #dfd8c8;
+  --scrollColor: #52575d;
+  --creditHover: #dfd8c8;
 }
 body {
   background-color: var(--background);
@@ -121,7 +218,8 @@ br {
   cursor: pointer;
   transition-duration: 0.4s;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--btnBgHover);
   color: var(--btnHover);
   transform: scale(1.1);
@@ -169,6 +267,74 @@ h4 {
   cursor: pointer;
 }
 .aTag:hover {
-  color: var(--bgEmpty);
+  color: var(--creditHover);
   transition-duration: 0.5s;
+}
+
+.themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+.theme {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: var(--btnBg);
+  color: var(--btn);
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.pinkT {
+  background-color: #fbaccc;
+}
+.pinkT:hover {
+  background-color: #f1d1d0;
+}
+
+.greenT {
+  background-color: #6effa1;
+}
+.greenT:hover {
+  background-color: #a3ffc3;
+}
+
+.yellowT {
+  background-color: #eec550;
+}
+.yellowT:hover {
+  background-color: #ffda73;
+}
+
+.darkT {
+  background-color: #00adb5;
+}
+.darkT:hover {
+  background-color: #00cdd8;
+}
+
+.redT {
+  background-color: #be3144;
+}
+.redT:hover {
+  background-color: #e74056;
+}
+
+.arminT {
+  background-color: #a97555;
+}
+.arminT:hover {
+  background-color: #be9074;
+}
+
+.brownT {
+  background-color: #f1f4c6;
+}
+.brownT:hover {
+  background-color: #f3f5dd;
 }
