@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Minesweeper</title>
   </head>
-  <body oncontextmenu="return false;">
+  <body id="body" oncontextmenu="return false;">
     <h1 id="h1">Minesweeper</h1>
 
     <div class="board" id="board"></div>
@@ -36,6 +36,51 @@
         type="button"
         value="Extreme"
         onclick="startNew('extreme')"
+      />
+    </div>
+    <div class="themes">
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('pink')"
+        class="theme pinkT"
+      />
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('red')"
+        class="theme redT"
+      />
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('green')"
+        class="theme greenT"
+      />
+
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('armin')"
+        class="theme arminT"
+      />
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('brown')"
+        class="theme brownT"
+      />
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('dark')"
+        class="theme darkT"
+      />
+      <input
+        type="button"
+        value=" "
+        onclick="changeTheme('yellow')"
+        class="theme yellowT"
       />
     </div>
     <h4 class="credit">

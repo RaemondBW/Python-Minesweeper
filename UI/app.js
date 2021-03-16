@@ -141,3 +141,16 @@ function drawFirst() {
 
 //todo  set cookie (Later)
 startNew("easy");
+
+var themes = ["pink", "green", "dark", "red", "yellow", "armin", "brown"];
+function changeTheme(name) {
+  const body = document.getElementById("body");
+  body.className = "";
+
+  if (themes.includes(name)) {
+    body.classList.add(name);
+  } else {
+    body.classList.add("pink");
+  }
+}
+changeTheme("pink");
