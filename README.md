@@ -17,4 +17,4 @@ And I ([Erfan Paslar](https://github.com/erfanpaslar/Python-Minesweeper)) made a
 Use `pip install eel` to install the library.
 
 For GUI run `minesweeperGUI.py`
-And for TUI `run minesweeper.py`
+And for TUI run `minesweeper.py`
